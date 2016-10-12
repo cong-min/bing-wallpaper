@@ -1,5 +1,4 @@
-var http = require('http'),
-    fs = require('fs');
+var http = require('http');
 http.createServer(function(req, response) {
     var today = new Date();
     today.setHours(0);
