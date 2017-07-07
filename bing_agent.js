@@ -21,7 +21,7 @@ http.createServer(function(req, response) {
         bing_res.on('end', function(){
             bing_body = Buffer.concat(bing_body);
             bing_data = JSON.parse(bing_body.toString());
-            http.get('http://cn.bing.com' + bing_data.images[0].url, function(img_res){
+            http.get('https://cn.bing.com' + bing_data.images[0].url, function(img_res){
                 var img_body = [];
                 img_res.on('data', function(chunk){
                     img_body.push(chunk);
