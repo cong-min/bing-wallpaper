@@ -1,5 +1,5 @@
 <?php
-	$str = file_get_contents('https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1');
+	$str = file_get_contents('http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1');
 	$data = json_decode($str);
 	$imghost = 'https://cn.bing.com';
 	$imgpath = $data -> {"images"}[0] -> {"url"};
