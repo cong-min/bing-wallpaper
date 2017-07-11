@@ -13,7 +13,7 @@ http.createServer(function(req, response) {
         'Last-Modified': today.toUTCString(),
         'Content-Type': 'image/jpeg'
     });
-    http.get('https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1', function(bing_res){
+    http.get('https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1', function(bing_res){
         var bing_body = [], bing_data = {};
         bing_res.on('data', function(chunk){
             bing_body.push(chunk);
@@ -21,7 +21,7 @@ http.createServer(function(req, response) {
         bing_res.on('end', function(){
             bing_body = Buffer.concat(bing_body);
             bing_data = JSON.parse(bing_body.toString());
-            http.get('https://cn.bing.com' + bing_data.images[0].url, function(img_res){
+            http.get('https://www.bing.com' + bing_data.images[0].url, function(img_res){
                 var img_body = [];
                 img_res.on('data', function(chunk){
                     img_body.push(chunk);
