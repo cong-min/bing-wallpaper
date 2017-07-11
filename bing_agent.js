@@ -13,7 +13,7 @@ http.createServer(function(req, response) {
         'Last-Modified': today.toUTCString(),
         'Content-Type': 'image/jpeg'
     });
-    http.get('http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1', function(bing_res){
+    http.get('https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1', function(bing_res){
         var bing_body = [], bing_data = {};
         bing_res.on('data', function(chunk){
             bing_body.push(chunk);
