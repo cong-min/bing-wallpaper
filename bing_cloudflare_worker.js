@@ -1,3 +1,4 @@
+/* npx wrangler deploy bing_cloudflare_worker.js --name bing-wallpaper --compatibility-date $(date +%Y-%m-%d) */
 addEventListener('fetch', event => {
     event.respondWith((async () => {
         try {
